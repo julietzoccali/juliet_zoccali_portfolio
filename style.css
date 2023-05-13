@@ -1,0 +1,861 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html
+{
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 14px;
+  background: url("./images/v2_20.png");
+}
+
+
+.navbar {
+  height: 100px;
+  width: 100%;
+}
+
+
+.english{
+  width: 70px;
+  height: 100px;
+  color: #000;
+  position: relative;
+  font-family: 'Overpass', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  float: right;
+  right: 175px;
+  top: 20px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.english i{
+  position: absolute;
+  float: right;
+  top: 6px;
+  left: 70px;
+}
+
+
+.english:hover  #dropdown-content, .english:active #dropdown-content {
+  display: block;
+}
+
+
+.arrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+#arrow_side {
+  transform: rotate(45deg);
+}
+
+.english:hover #arrow_side  {
+  transform: rotate(-135deg);
+}
+
+
+#dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 100px;
+  z-index: 1;
+  margin-top: 5px;
+  font-family: 'Overpass', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+
+}
+
+#dropdown-content a {
+  float: none;
+  color: black;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  font-family: 'Overpass', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+}
+
+#dropdown-content a:hover {
+  color: #0601FF;
+}
+
+.cloud
+{
+  top:250px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  max-width: 800px;
+  max-height: 800px;
+  background: url('./images/blue_cloud.svg');
+  z-index: 10;
+}
+
+.cloud_2
+{
+  top:1400px;
+  position: absolute;
+  width: 800px;
+  height: 800px;
+  background: url('./images/blue_cloud_2.svg');
+  right: 0;
+}
+
+.portfolio {
+  width: 77px;
+  color: rgba(0,0,0,1);
+  position: relative;
+  top: 0;
+  left: 0;
+  font-family: 'Overpass', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  opacity: 1;
+  text-align: left;
+}
+
+.portfolio_background {
+  width: 100%;
+  max-width: 1200px;
+  height: 34px;
+  opacity: 1;
+  position: relative;
+  top: 20%;
+  overflow: hidden;
+  left: 10%;
+}
+
+.portfolio_underline{
+  width: 77px;
+  background: rgba(215,215,215,1);
+  opacity: 1;
+  position: relative;
+  top: 33px;
+  left: 0;
+  border: 1px solid rgba(0,0,0,1);
+}
+
+.hero{
+  position: relative;
+  height: 700px;
+  width: 100%;
+}
+
+.hero_copy{
+  width: 100%;
+  max-width: 805px;
+  top: 20px;
+  left: 10%;
+  font-size: 70px;
+  opacity: 1;
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  position: absolute;
+  line-height: 78px;
+  letter-spacing: -2px;
+}
+
+.hero_copy span{
+  color: #0601FF;
+  font-weight: 600;
+}
+
+.hero_photo {
+  width: 100%;
+  height: 100%;
+  max-width: 382px;
+  max-height: 379px;
+  background: url('./images/juliet.png');
+  opacity: 1;
+  position: absolute;
+  float: right;
+  right: 10%;
+  top: 20px;
+  background-size: cover;
+}
+
+.hero_photo_mobile {
+  display: none;
+}
+
+.description_container {
+  width: 100%;
+  height: 500px;
+  position: relative;
+  top: -400px;
+  overflow: hidden;
+}
+
+.description_text {
+  width: 448px;
+  position: relative;
+  font-size: 25px;
+  float: left;
+  font-family: 'Poppins', sans-serif;
+  text-align: left;
+  font-weight: 300;
+  line-height: 34px;
+  letter-spacing: 0;
+  left: 10%;
+}
+
+.project_button {
+  width: 278px;
+  height: 48px;
+  background-color: #0601FF;
+  opacity: 1;
+  position: absolute;
+  border-radius: 24px;
+  top: 200px;
+  color: #fff;
+  cursor: pointer;
+  font-family: 'Overpass', sans-serif;
+  font-weight: 500 ;
+  font-size: 18px;
+  line-height: 23px;
+  letter-spacing: 0;
+  text-align: center;
+  z-index: 11;
+  border: 1px solid #fff;
+  left: 10%;
+
+}
+.project_button:hover
+{
+  background-color: #fff;
+  color: #0601FF;
+  border: 1px solid #0601FF;
+}
+
+.project_title
+{
+  top: -500px;
+  position: relative;
+  text-align: center;
+}
+
+
+h3 {
+  position: relative;
+  font-size: 70px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  line-height: 78px;
+  letter-spacing: -2px;
+  margin: 0 auto;
+}
+
+#projects
+{
+  position: absolute;
+  top: 800px;
+}
+
+.display {
+  display: grid;
+  width: 100%;
+  max-width: 900px;
+  margin: -500px auto 100px auto;
+  grid-template-columns: repeat(auto-fill, minmax(11em, 1fr));
+  column-gap: 100px;
+  row-gap: 15px;
+}
+
+.card
+{
+  width: 280px;
+  height: 100%;
+  cursor: url('./images/cursor.cur'), auto;
+  font-size: 20px;
+}
+.card a{
+  cursor: url('./images/cursor.cur'), auto;
+}
+
+a.circle
+{
+  width: 280px;
+  height: 350px;
+}
+
+.circle {
+  --width: 100%;
+  --time: 1s;
+  position: relative;
+  display: inline-block;
+  width: 280px;
+  height: 350px;
+  overflow: hidden;
+  transition: 0.10s background;
+}
+
+.image
+{
+  width: 280px;
+  height: 100%;
+  opacity: 1;
+  transition: 0.5s opacity;
+  position: absolute;
+}
+
+.image_hover
+{
+
+  width: 280px;
+  height: 100%;
+  opacity: 0;
+  transition: 0.5s opacity;
+  position: absolute;
+}
+
+
+.circle:hover .image
+{
+  opacity: 0;
+}
+
+.circle:hover .image_hover
+{
+  opacity: 1;
+}
+
+
+.circle span {
+  position: absolute;
+  display: block;
+  content: "";
+  z-index: 0;
+  width: 0;
+  height: 0;
+  border-radius: 100%;
+  background: #0601FF;
+  opacity: 0.1;
+  transform: translate(-50%, -50%);
+  transition: width var(--time), padding-top var(--time), height var(--time) ;
+}
+
+.circle:hover span {
+  width: calc(var(--width) * 3);
+  height: calc(var(--width) * 3);
+}
+
+.view
+{
+  position: relative;
+  top:360px;
+  left: 170px;
+  color: #fff;
+  bottom: 50px;
+  width: 100px;
+  font-family: Poppins, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 78px;
+  letter-spacing: 0;
+  text-align: left;
+  opacity: 0;
+  z-index: 5000;
+}
+
+.card:hover .view
+{
+  opacity: 1;
+}
+
+.view:hover
+{
+  color: #0601FF;
+}
+
+a{
+  text-decoration: none;
+}
+
+.card_bar
+{
+  width: 280px;
+  border: 1px solid black;
+  top: 10px;
+  position: relative;
+}
+
+.card_title
+{
+  font-weight: 600;
+  font-family: 'Overpass', sans-serif;
+  color: #0601FF;
+  font-size: 14px;
+  position: relative;
+  top: 20px;
+}
+.card_description
+{
+  font-weight: 500;
+  font-family: 'Overpass', sans-serif;
+  font-size: 16px;
+  position: relative;
+  top: 25px;
+}
+
+.footer {
+  width: 100%;
+  height: 490px;
+  position: relative;
+  bottom: 0;
+
+}
+
+.footer_background {
+  width: 100%;
+  height: 490px;
+  background: rgba(6,1,255,1);
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.footer_container
+{
+  max-width: 1000px;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.footer_title {
+  width: 100%;
+  max-width: 735px;
+  color: #ffffff;
+  position: absolute;
+  top: 104px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 70px;
+  text-align: left;
+  line-height: 78px;
+  letter-spacing: 0;
+}
+
+.footer_line {
+  width: 100%;
+  background: rgba(215,215,215,1);
+  opacity: 1;
+  position: absolute;
+  top: 230px;
+  border: 1px solid #ffffff;
+}
+
+.footer_button {
+  width: 278px;
+  height: 48px;
+  background-color: #ffff;
+  border-radius: 24px;
+  position: absolute;
+  color: #000;
+  top: 300px;
+  right: 0;
+  cursor: pointer;
+  font-family: 'Overpass', sans-serif;
+  font-weight: 500 ;
+  font-size: 18px;
+  float: right;
+  line-height: 23px;
+  letter-spacing: 0;
+  text-align: center;
+  border: 1px solid #ffffff;
+
+}
+.footer_button:hover
+{
+  background-color: #fff;
+  color: #0601FF;
+  border: 1px solid #000;
+}
+
+
+@media all and (max-width: 920px)
+{
+  body {
+    height: 2500px;
+  }
+
+  .english {
+    right: 50px;
+  }
+
+  .portfolio_background {
+    top: 0;
+    left: 5%;
+  }
+
+  .hero
+  {
+    height: 350px;
+    margin-top: 50px;
+  }
+
+  .hero_copy
+  {
+    max-width: 400px;
+  }
+
+  .hero_photo_mobile {
+    display: none;
+  }
+
+  .hero_photo
+  {
+    max-width: 250px;
+    max-height: 250px;
+    top: 35px
+  }
+
+  .description_container
+  {
+    height: 300px;
+    position: relative;
+    top: 0;
+    left: 0;
+    text-align: center;
+  }
+
+  .description_text {
+    font-size: 20px;
+  }
+
+  .project_title
+  {
+    top: 0;
+  }
+
+  h3
+  {
+    font-size: 50px;
+    margin-top: 0;
+  }
+
+  .circle {
+    --width: 100%;
+    --time: 1s;
+    position: relative;
+    display: inline-block;
+    width: 240px;
+    height: 320px;
+    overflow: hidden;
+    transition: 0.10s background;
+  }
+
+  .card_bar
+  {
+    width: 100%;
+    border: 1px solid black;
+    top: 10px;
+    position: relative;
+  }
+
+
+  .display {
+    display: grid;
+    width: 100%;
+    max-width: 750px;
+    margin: 0 auto;
+    grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+    grid-gap: 70px;
+  }
+
+
+
+  .footer {
+    position: absolute;
+    margin-top: inherit;
+    top: 2500px;
+  }
+
+  .footer_title {
+    max-width: 400px;
+    left: 20px;
+    font-size: 35px;
+  }
+
+  .footer_line {
+    width: 90%;
+    top: 170px;
+    left: 20px;
+  }
+
+  .footer_button {
+    top: 200px;
+    right: 100px;
+  }
+
+}
+
+@media all and (max-width: 780px) {
+
+  body {
+    height: 2800px;
+  }
+
+  .hero {
+    width: 100%;
+    align-items: center;
+    left: 0;
+    height: 300px;
+  }
+
+  .cloud
+  {
+    z-index: -1;
+
+  }
+
+  .project_title
+  {
+    top: 0;
+  }
+
+  h3
+  {
+    font-size: 35px;
+    margin-top: 0;
+  }
+
+
+  .hero_photo_mobile {
+    width: 100%;
+    height: 100%;
+    max-width: 382px;
+    max-height: 379px;
+    background: url('./images/juliet.svg');
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    display: block;
+    padding: 200px;
+    margin: 0 auto;
+    z-index: 40000;
+  }
+
+  .hero_photo {
+    display: none;
+  }
+
+  .description_container {
+    max-width: 500px;
+    margin-top: 100px;
+  }
+
+  .project_button {
+    left: 0;
+    top: 20px;
+  }
+
+  .footer {
+    width: 100%;
+    height: 490px;
+    top: 2800px;
+  }
+
+
+  @media all and (max-width: 630px) {
+
+    body {
+      height: 4300px;
+    }
+
+
+
+    .footer {
+      width: 100%;
+      height: 490px;
+      position: absolute;
+      margin-top: inherit;
+      top: 4300px;
+    }
+
+  }
+  @media all and (max-width: 480px) {
+
+    body {
+      height: 4300px;
+    }
+
+    .english {
+      right: 20px;
+      top: 20px;
+    }
+
+
+
+    .hero {
+      position: relative;
+      height: 250px;
+      display: flex;
+    }
+
+    .hero_copy {
+      width: 100%;
+      max-width: 300px;
+      top: 0;
+      left: 5%;
+      font-size: 55px;
+      opacity: 1;
+      text-align: left;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 300;
+      position: relative;
+    }
+
+    .hero_photo {
+      display: none;
+    }
+
+    .hero_photo_mobile {
+      width: 100%;
+      height: 100%;
+      max-width: 300px;
+      max-height: 300px;
+      background: url('./images/juliet.png');
+      background-size: cover;
+      position: relative;
+      overflow: hidden;
+      display: block;
+      padding: 100px;
+      margin: 0 auto;
+      z-index: 40000;
+    }
+
+    .cloud{
+      display: none;
+    }
+
+    .cloud_2 {
+      display: none;
+    }
+
+    .description_text {
+      width: 350px;
+      font-size: 20px;
+      float: inherit;
+      left: 10%;
+      position: relative;
+    }
+
+    .project_button {
+      left: 15%;
+      top: 150px;
+    }
+    .project_title
+    {
+      top: 0;
+    }
+
+    h3
+    {
+      font-size: 35px;
+      margin-top: 0;
+    }
+
+    .display {
+      row-gap: 10px;
+    }
+
+    .card
+    {
+      margin: 0 auto;
+    }
+    .footer
+    {
+      width: 100%;
+      height: 490px;
+      position: absolute;
+      margin-top: inherit;
+      top: 4300px;
+    }
+
+    .footer_background {
+      width: 100%;
+      height: 490px;
+      background: rgba(6, 1, 255, 1);
+      opacity: 1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      overflow: inherit;
+    }
+
+    .footer_container {
+      max-width: 1000px;
+      width: 100%;
+      height: 100%;
+      position: relative;
+      text-align: center;
+    }
+
+    .footer_title {
+      width: 100%;
+      max-width: 320px;
+      color: #ffffff;
+      position: absolute;
+      top: 104px;
+      left: 20px;
+      font-weight: 300;
+      font-size: 30px;
+      text-align: left;
+    }
+
+    .footer_line {
+      width: 90%;
+      background: rgba(215, 215, 215, 1);
+      opacity: 1;
+      position: absolute;
+      top: 200px;
+      left: 20px;
+      border: 1px solid #ffffff;
+    }
+
+    .footer_button {
+      width: 278px;
+      height: 48px;
+      background-color: #ffff;
+      border-radius: 24px;
+      position: absolute;
+      color: #000;
+      top: 230px;
+      right: 50px;
+      cursor: pointer;
+      font-weight: 400;
+      font-size: 18px;
+
+    }
+
+    .footer_button:hover {
+      background-color: #fff;
+      color: #0601FF;
+      border: 1px solid #000;
+    }
+
+  }
+}
+
+
+
+
+
